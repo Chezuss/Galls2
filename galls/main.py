@@ -139,6 +139,7 @@ def parse(line):
     chat_type = regex.group(1)
     raw_username = regex.group(2)
     username = raw_username.split('\u200e﹫', 1)[0].strip()
+    username = re.sub(r'[\u200e﹫@].*', '', regex.group(2)).strip()
     command = regex.group(3)
     args = regex.group(4).strip() if regex.group(4) else None
 
