@@ -8,7 +8,7 @@ Check out original creators here:
 
 ## Requirements
 
-- [Python 3.11](https://www.python.org/downloads/release/python-3119/) (only version I tested)
+- [Python 3.11](https://www.python.org/downloads/release/python-3119/)
 - [Poetry](https://python-poetry.org/)
 
 ## Installing
