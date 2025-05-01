@@ -134,8 +134,11 @@ def parse(line):
     if not regex:
         return
 
+    print("Full match groups:", regex.groups())
+
     chat_type = regex.group(1)
-    username = regex.group(2)
+    raw_username = regex.group(2)
+    username = raw_username.split('\u200e﹫', 1)[0].strip()
     command = regex.group(3)
     args = regex.group(4).strip() if regex.group(4) else None
 
@@ -163,37 +166,7 @@ def parse(line):
     user_command_timestamps[username].append(now)
     command = command.lower()
 
-    if command == "!i":
-        if args:
-            inspect_link = re.search(r"steam:\/\/rungame\/730\/[0-9]+\/\+csgo_econ_action_preview%20([A-Za-z0-9]+)", args)
-            if inspect_link:
-                write_command(f"gameui_activate;csgo_econ_action_preview {inspect_link.group(1)}\n say Opened inspect link on my client.", team_chat=is_team_chat)
-            else:
-                write_command("say Invalid inspect link.", team_chat=is_team_chat)
-        else:
-            write_command("say No inspect link provided.", team_chat=is_team_chat)
-        press_key(username)
-
-    elif command == "!switchhands":
-        write_command("switchhands \n say Switched viewmodel.", team_chat=is_team_chat)
-        press_key(username)
-
-    elif command == "!play":
-        if args:
-            write_command(f"play {args}\n say Playing {args}.", team_chat=is_team_chat)
-        else:
-            write_command("say No sound provided", team_chat=is_team_chat)
-        press_key(username)
-
-    elif command == "!flash":
-        write_command("say fuck you.", team_chat=is_team_chat)
-        press_key(username)
-        write_command("flashbangs")
-        for _ in range(13):
-            press_key_no_delay()
-            time.sleep(0.01 / 13)
-
-    elif command == "!fish":
+    if command == "!fish":
         cast_line(username, bank, team_chat=is_team_chat)
         write_command(f"say {username}'s balance: ${round(bank.get_player_balance(username), 2)}", team_chat=is_team_chat)
         press_key(username)

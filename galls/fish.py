@@ -275,15 +275,6 @@ class Bank:
 
 # Existing functions
 
-def write_command(command, team_chat=False):
-    with open(EXEC_FILE, 'w', encoding='utf-8') as f:
-        if command.startswith("say") or command.startswith("say_team"):
-            if team_chat:
-                command = command.replace("say ", "say_team ", 1)
-            else:
-                command = command.replace("say_team ", "say ", 1)
-        f.write(command)
-
 def truncate_to_hundredths(value):
     return math.trunc(value * 100) / 100
 
