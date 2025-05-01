@@ -3,8 +3,8 @@
 Added some functions removed others
 
 Check out original creators here:
-[Pandaptable](https://github.com/Pandaptable)
-[DeaFPS](https://twitter.com/deafps_)
+\n[Pandaptable](https://github.com/Pandaptable)
+\n[DeaFPS](https://twitter.com/deafps_)
 
 ## Requirements
 
