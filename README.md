@@ -2,8 +2,9 @@
 
 Added some functions removed others
 
-Check out original program from here:
+Check out original creators here:
 [Pandaptable](https://github.com/Pandaptable)
+[DeaFPS](https://twitter.com/deafps_)
 
 ## Requirements
 
