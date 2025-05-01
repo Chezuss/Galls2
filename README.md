@@ -19,4 +19,4 @@ Check out original creators here:
 4. Run `cd galls` inside of a terminal window.
 5. Run `poetry install` inside of a terminal window to install dependencies.
 6. Make a copy of `.env.example` and name it `.env`, edit it to contain the correct environment variables needed for the script to work.
-7. Run `poetry run python main.py` inside of the project directory.
+7. Run `poetry run python main.py` inside of the project directory or run fish.bat.
