@@ -6,6 +6,22 @@ Check out original creators here:
   - [Pandaptable](https://github.com/Pandaptable)
   - [DeaFPS](https://twitter.com/deafps_)
 
+## Features
+- `!fish`
+  - Fishing minigame!
+- `!gamble <amount|all>`
+  - Gamble an amount of money or all your balance.
+- `!balance`
+  - Check your current money balance.
+- `!leaderboard`
+  - View the top 5 players by balance.
+- `!buyrod <type>`
+  - Buy a better fishing rod to increase fish value.
+- `!listrods`
+  - List all available rods and their effects.
+- `!help`
+  - Show list of commands.
+
 ## Requirements
 
 - [Python 3.11](https://www.python.org/downloads/release/python-3119/)
